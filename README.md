@@ -34,5 +34,5 @@ Este sistema permite realizar as quatro operações básicas de um CRUD para o g
 
 Para uma visão rápida de como o sistema funciona, assista ao vídeo abaixo:
 
-[![Demonstração do Sistema de Cadastro de Alunos]<img alt="sistema" src="./frontend/assets/sistema.gif">
+[![Demonstração do Sistema de Cadastro de Alunos]<img alt="sistema" src="./frontend/assets/sistema2.gif">
 
