@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="./assets/calendar-check-fill.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <nav class="menu-lateral">
+        <ul>
+            <li class="item-menu">
+                <a href="./index.html">
+                    <span class="icon"><i class="bi bi-calendar-check-fill"></i></i></span>
+                </a>
+            </li>
+            <li class="item-menu ativo">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-house-door"></i></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main class="mainContent">
+        <h1>Bem-vindo ao e-Aluno!</h1>
+        <div class="listStudents">
+            <div>
+                <button type="button" class="addButton">
+                    Adicionar Aluno
+                </button>
+            </div>
+            <table>
+                <thead>
+                  <tr>
+                    <th>Nome</th>
+                    <th>Matrícula</th>
+                    <th>E-mail</th>
+                    <th>Turma</th>
+                    <th>Curso</th>
+                    <th id="actionThead">Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                  </tr>
+                  <tr>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+        <div class="modalContainer">
+            <span>
+                <h2>Adicionar Aluno</h2>
+                <i  id="closeModal" class="bi bi-x-lg actionIcons" ></i>
+            </span>
+            <form action="index.html" method="POST" class="studentForm">
+                <label for="nome">Nome: *</label><br/>
+                <input class="inputModal" type="text" id="nome" name="nome" autocomplete="off" />
+                <br>
+                <label for="email">E-mail: *</label><br/>
+                <input class="inputModal" type="email" id="email" name="email" autocomplete="off" />
+                <br>
+                <label for="matricula">Matrícula: *</label>
+                <br>
+                <input class="inputModal" type="text" id="matricula" name="matricula" autocomplete="off" />
+                <br>
+                <label for="curso">Curso: *</label><br>
+                <input class="inputModal" type="text" name="curso" id="curso" autocomplete="off" >
+                <br>
+                <label for="turma">Turma: *</label><br/>
+                <input class="inputModal" type="text" name="turma" id="turma" autocomplete="off">
+    
+                <input  class="addButton" id="sendButton" type="submit" value="Salvar"/>
+            </form>
+        </div>
+        <div class="modalContainerEdit">
+            <span>
+                <h2>Alterar Aluno</h2>
+                <i  id="closeModalEdit" class="bi bi-x-lg actionIcons" ></i>
+            </span>
+            <form action="index.html" method="POST" class="editForm">
+                <label for="nome">Nome: *</label><br/>
+                <input class="inputModal" type="text" id="nomeEdit" name="nome" required autocomplete="off" />
+                <br>
+                <label for="email">E-mail: *</label><br/>
+                <input class="inputModal" type="email" id="emailEdit" name="email" required autocomplete="off" />
+                <br>
+                <label for="matricula">Matrícula: *</label>
+                <br>
+                <input class="inputModal" type="text" id="matriculaEdit" name="matricula" required autocomplete="off" />
+                <br>
+                <label for="curso">Curso: *</label><br>
+                <input class="inputModal" type="text" name="curso" id="cursoEdit" required autocomplete="off" >
+                <br>
+                <label for="turma">Turma: *</label><br/>
+                <input class="inputModal" type="text" name="turma" id="turmaEdit" required autocomplete="off">
+                <br>
+                <input  class="addButton" id="sendButton" type="submit" value="Salvar Alteração"/>
+            </form>
+        </div>
+        <div id="successMessage">
+            Ação concluída com sucesso!
+        </div>
+        <div id="campoInvalidadoMsg">
+            Todos os campos são obrigatórios!
+        </div>
+        <div id="campoInvalidadoMatricula">
+            O campo MATRÍCULA deve conter até 8 caracteres!
+        </div>
+        <div id="MatriculaExistente">
+            Essa matrícula já existe no sistema!
+        </div>
+        <div id="errorMessage">
+            Algo Inesperado aconteceu!
+        </div>
+    </main>
+    <script src="./assets/js/insert.js"></script>
+    <script src="./assets/js/crud.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
